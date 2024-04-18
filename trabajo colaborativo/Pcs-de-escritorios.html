@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TecnoTienda</title>
+    <link rel="stylesheet" href="./css/estilos.css">
+    <link rel="shortcut icon" href="img/puesto-de-trabajo.png" type="image/x-icon">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-superior">
+            <div class="icon">
+                <a href="index.html"><img id="icon" src="img/logos de pagina/logoEx.png" alt="logo_de_imagen"
+                        height="60px" width="100px"></a>
+            </div>
+
+            <div class="buscador">
+                <input type="text" placeholder="Eso que querés... Buscalo acá">
+                <button><img src="img/nav/icons8-búsqueda-50.png" alt="buscar" height="30px"></button>
+            </div>
+
+            <div class="formularios">
+                <a href="login.html">Login</a>
+                <a href="registro.html">Registrarse</a>
+                <a href="#"><img src="img/nav/carrito-de-compras.png" height="31px" alt="carrito de compras"></a>
+            </div>
+
+        </div>
+
+
+    </header>
+    <nav class="header-inferior">
+        <div class="desplegable">
+            <a href="#">CATEGORIAS &#9660;</a>
+        </div>
+        <nav class="main-nav">
+            <a href="index.html" class="inicio">Inicio</a>
+            <a href="Pcs-de-escritorios.html" class="pcs-escritorio">Pcs de escritorios</a>
+            <a href="monitores.html">Monitores</a>
+            <a href="perifericos.html">Perifericos</a>
+            <a href="contactanos.html">Contactanos</a>
+        </nav>
+
+    </nav>
+    <div class="banner-presentacion">
+        <img src="img/propaganda/banner-pc-de-escritorio.png" width="100%"  alt="pcs de escritorios">
+    </div>
+
+    <main>
+        
+
+        <div class="pcs-escritorio-selectores">
+
+            <h2>Pcs de escritorios</h2>
+            <div>
+                <label for="ordenar">Ordenar por:</label>
+                <select name="ordenar" id="ordenar">
+                    <option value="" disabled selected>Seleccionar</option>
+                    <option value="menor-precio">Menor precio</option>
+                    <option value="mayor-precio">Mayor precio</option>
+                    <option value="nombre-ascedente">Nombre ascendente</option>
+                    <option value="nombre-descendente">Nombre descendente</option>
+                </select>
+            </div>
+            <div>
+                <label for="mostrar">Mostrar:</label>
+                <select name="mostrar" id="mostrar">
+                    <option value="" disabled selected>Seleccionar</option>
+                    <option value="4">4</option>
+                    <option value="4">8</option>
+                    <option value="12">12</option>
+                    <option value="24">24</option>
+                </select>
+
+
+            </div>
+
+        </div>
+        <div class="nav-pc-escritorio">
+            <div class="marcas-pc">
+                <p>Marcas</p>
+                <a href="#">Amd</a>
+                <a href="#">Bangho</a>
+                <a href="#">Intel</a>
+            </div>
+            <div class="procesador">
+                <p>Procesador</p>
+                <p>Amd</p>
+                <a href="#">Ryzen 3</a>
+                <a href="">Ryzen 5</a>
+                <a href="#">Ryzen 7</a>
+                <p>Intel</p>
+                <a href="#">Core I9</a>
+                <a href="#">Core I7</a>
+                <a href="#">Core I5</a>
+                <a href="#">Core I3</a>
+                <a href="#">Celeron</a>
+            </div>
+            <div class="memoria-ram">
+                <p>Memoria Ram</p>
+                <a href="#">4 Gigas</a>
+                <a href="#">8 Gigas</a>
+                <a href="#">16 Gigas</a>
+                <a href="#">32 Gigas</a>
+            </div>
+            <div class="uso-recomendado-pc">
+                <p>Uso Recomendado</p>
+                <a href="#">Arquitectura-Diseño-Edición</a>
+                <a href="#">Gaming</a>
+                <a href="#">Hogar-Oficina</a>
+            </div>
+
+
+        </div>
+        <div class="section-productos">
+            <div id="producto-amdryzen5-8gb" class="productos">
+                <h3>PC AMD Ryzen 5 4600G 8Gb SSD 240G</h3>
+                <div class="contenedor-img">
+                    <img src="img/productos index/1662661172_4600g-Photoroom.png-Photoroom.png" alt="pc-ryzen"
+                        height="180px">
+                </div>
+
+                
+                <p>$339990</p>
+                <button class="carrito">Agregar al carrito</button>
+            </div>
+            <div id="producto-amdryzen5-16gb" class="productos">
+                <h3>PC AMD Ryzen 5 4600G 16Gb SSD 240G</h3>
+                <div class="contenedor-img">
+                    <img src="img/productos index/1662661172_4600g-Photoroom.png-Photoroom.png" alt="pc-ryzen"
+                        height="180px">
+                </div>
+
+                
+                <p>$369990</p>
+                <button class="carrito">Agregar al carrito</button>
+            </div>
+            <div id="producto-amdryzen5-5600gb-8gb" class="productos">
+                <h3>PC AMD Ryzen 5 5600G 8Gb SSD 240G</h3>
+                <div class="contenedor-img">
+                    <img src="img/productos index/1662661172_4600g-Photoroom.png-Photoroom.png" alt="pc-ryzen"
+                        height="180px">
+                </div>
+
+                
+                <p>$386990</p>
+                <button class="carrito">Agregar al carrito</button>
+            </div>
+            <div id="pc-lite-bangho" class="productos">
+                <h3>PC BANGHO E27 I3 12100 8GB SSD 480GB</h3>
+                <div class="contenedor-img">
+                    <img src="img/productos index/1677251097_e27.png" alt="pc de escritorio" height="180px">
+                </div>
+
+                
+                <p>$1260000</p>
+                <button class="carrito">Agregar al carrito</button>
+            </div>
+            <div id="pc-amryzen3-240gb" class="productos">
+                <h3>PC AMD RYZEN 3 3200G 8GB SSD 240</h3>
+                <div class="contenedor-img">
+                    <img src="img/pc escritorio/pc amd ryzen 3.png" alt="pc de escritorio" height="180px">
+                </div>
+
+                
+                <p>$299990</p>
+                <button class="carrito">Agregar al carrito</button>
+            </div>
+            <div id="pc-intelceleron-240gb" class="productos">
+                <h3>PC INTEL CELERON DUAL CORE</h3>
+                <div class="contenedor-img">
+                    <img src="img/pc escritorio/pc intel celeron.png" alt="pc de escritorio" height="180px">
+                </div>
+
+                
+                <p>$329990</p>
+                <button class="carrito">Agregar al carrito</button>
+            </div>
+            <div id="pc-inteli3-240gb" class="productos">
+                <h3>PC INTEL I3 10100 SSD 240GB 8GB</h3>
+                <div class="contenedor-img">
+                    <img src="img/pc escritorio/intel core i3 240gb.png" alt="pc de escritorio" height="180px">
+                </div>
+
+                
+                <p>$379990</p>
+                <button class="carrito">Agregar al carrito</button>
+            </div>
+            <div id="pc-inteli5-240gb" class="productos">
+                <h3>PC INTEL CORE I5 7600K SSD 240GB 8GB</h3>
+                <div class="contenedor-img">
+                    <img src="img/pc escritorio/intel i5 240gb.png" alt="pc de escritorio" height="180px">
+                </div>
+
+                
+                <p>$399990</p>
+                <button class="carrito">Agregar al carrito</button>
+            </div>
+            <div id="pc-amdryzen-monitor" class="productos">
+                <h3>PC AMD RYZEN 3 3200G + MONITOR 22</h3>
+                <div class="contenedor-img">
+                    <img src="img/pc escritorio/pc amd ryzen 3200gb + monitor.png" alt="pc de escritorio"
+                        height="180px">
+                </div>
+
+                
+                <p>$414990</p>
+                <button class="carrito">Agregar al carrito</button>
+            </div>
+            <div id="pc-inteli7" class="productos">
+                <h3>PC INTEL I7 10700 SSD 240GB 8GB</h3>
+                <div class="contenedor-img">
+                    <img src="img/pc escritorio/pc intel i7.png" alt="pc de escritorio" height="180px">
+                </div>
+
+                
+                <p>$699990</p>
+                <button class="carrito">Agregar al carrito</button>
+            </div>
+            <div id="pc-amdryzen7" class="productos">
+                <h3>PC AMD RYZEN 7 8700G 960GB</h3>
+                <div class="contenedor-img">
+                    <img src="img/pc escritorio/pc amd ryzen 7.png" alt="pc de escritorio" height="180px">
+                </div>
+                <p>$869990</p>
+                <button class="carrito">Agregar al carrito</button>
+            </div>
+            <div id="pc-inteli9" class="productos">
+                <h3>PC INTEL CORE I9 10900F 16GB</h3>
+                <div class="contenedor-img">
+                    <img src="img/pc escritorio/pc intel i9.png" alt="pc de escritorio" height="180px">
+                </div>
+
+                
+                <p>$999990</p>
+                <button class="carrito">Agregar al carrito</button>
+            </div>
+
+        </div>
+
+
+
+
+
+    </main>
+    <footer> <!-- AQUI COMIENZA EL FOOTER-->
+        <div class="info-footer">
+            <a href="#">Quiénes somos</a>
+            <a href="#">Terminos y condiciones</a>
+            <a href="#">Politicas de privacidad</a>
+            <a href="#">Garantía y devoluciones</a>
+            <a href="#">Promociones y sorteos</a>
+        </div>
+        <div class="redes"> <!--DISTINTAS REDES SOCIALES-->
+            <h6>Nuestras redes</h6>
+            <div>
+                <a href="#"><img src="img/logos de redes/facebook.png" alt="logo de facebook" height="40px"></a>
+                <a href="#"><img src="img/logos de redes/instagram.png" alt="logo de instagram" height="40px"></a>
+            </div>
+        </div>
+        <div class="contacto"> <!--CONTACTO A TRAVES DE WHATSAPP-->
+            <h6>Contacto</h6>
+            <a href="#"><img src="img/logos de redes/whatsapp 2.png" alt="logo de whatsapp" height="40px"></a>
+        </div>
+        <div class="derecho">
+            <p>Copyright © Todos los derechos reservados</p>
+        </div>
+
+
+
+    </footer>
+
+
+
+
+
+
+
+</body>
+
+</html>
