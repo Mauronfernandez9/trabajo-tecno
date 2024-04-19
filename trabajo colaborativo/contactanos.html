@@ -1,79 +1,124 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!--ORIGINAL-->
 <html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TecnoTienda</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="./css/estilos.css">
     <link rel="shortcut icon" href="img/puesto-de-trabajo.png" type="image/x-icon">
+
 </head>
 
 <body>
-    <!--ENCABEZADO DE LA PAGINA WEB + NAV CON SUS CORRESPONDIENTES ANCLAS                                           -->
-    <header> <!-- EN ESTA PARTE DEL HEADER VA EL LOGO POR ENDE HAY UNA ETIQUETA "IMG" -->
-        <a href="index.html"><img id="icon" src="img/logos de pagina/logoEx.png" alt="logo_de_imagen" height="50px"></a>
-        <form action="#" method="post" class="busqueda">
-            <input type="text" name="search" placeholder="Encuentra la pieza perfecta para tu vida digital...">
-            <button type="submit">
-                <img src="img/nav/icons8-búsqueda-50.png" alt="" height="28px">
-            </button>
 
-        </form>
-        <div id="accesos-header">
-            <a href="login.html" class="a-header">Iniciar Sesión</a>
-            <a href="registro.html" class="a-header">Registrarse</a>
-            <a href="#"><img src="img/nav/carrito-de-compras.png" alt="carrito_de_compras" height="30px"></a>
+    <header class="header">
+        <div class="header-superior">
+            <div class="icon">
+                <a href="index.html"><img id="icon" src="img/logos de pagina/logoEx.png" alt="logo_de_imagen"
+                        height="60px" width="100px"></a>
+            </div>
+
+            <div class="buscador">
+                <input type="text" placeholder="Eso que querés... Buscalo acá">
+                <button><img src="img/nav/icons8-búsqueda-50.png" alt="buscar" height="30px"></button>
+            </div>
+
+            <div class="formularios">
+                <a href="login.html">Login</a>
+                <a href="registro.html">Registrarse</a>
+                <a href="#"><img src="img/nav/carrito-de-compras.png" height="31px" alt="carrito de compras"></a>
+            </div>
 
         </div>
+
+
     </header>
-    <nav>
-
-        <div id="categorias">
-            <!-- ESTA PRIMERA PARTE ES LA CATEGORIAS DONDE SE BUSCARIA PRESIONARLA Y DESPLEGARLA EN LAS DIFERENTES CATEGORIAS-->
-            <a href="#" id="enlace-categorias"><span class="span-categorias">CATEGORIAS </span> <img
-                    src="img/nav/abajo-cheuron.png" alt="flecha_hacia_abajo" height="15px"></a>
+    <nav class="header-inferior">
+        <div class="desplegable">
+            <a href="#">CATEGORIAS &#9660;</a>
         </div>
-        <div id="categorias-principales">
-            <a href="index.html" class="categorias-principales">Inicio</a>
-            <a href="Pcs-de-escritorios.html" class="categorias-principales">Pcs de escritorios</a>
-            <a href="monitores.html" class="categorias-principales">Monitores</a>
-            <a href="perifericos.html" class="categorias-principales">Perifericos</a>
+        <nav class="main-nav">
+            <a href="index.html" class="inicio">Inicio</a>
+            <a href="Pcs-de-escritorios.html" class="pcs-escritorio">Pcs de escritorios</a>
+            <a href="monitores.html">Monitores</a>
+            <a href="perifericos.html">Perifericos</a>
             <a href="contactanos.html">Contactanos</a>
-
-        </div>
-        <!--ESTA ES LA SEGUNDA PARTE DEL NAV AQUI CUENTA CON ANCLAS QUE NOS LLEVA A DIFERENTES CATEGORIAS PERO SERIAN ALGUNAS DE LAS CATEGORIAS PRINCIPALES DE NUESTRA PAGINA ADEMAS DE LA PAGINA DE INICIO Y CONTACTO-->
-
-        </div>
+        </nav>
 
     </nav>
+    <main class="main-contactanos">
+        <div class="formulario">
+            <h2>Dejanos tus datos</h2>
+            <p>Permitenos ayudarte o sugerirte... Déjanos tus datos para contactarte</p>
+        
+            <form action="#" method="post">
+                <label for="name">Nombre:</label>
+                <input type="text" name="name" id="name" required>
+                <label for="last-name">Apellido:</label>
+                <input type="text" name="last-name" id="last-name" required>
+                <label for="email">Correo Electronico:</label>
+                <input type="email" name="email" id="email" required>
+                <label for="country">País:</label>
+                <select name="country" id="country" required>
+                    <option value="arg">Argentina</option>
+                    <option value="br">Brasil</option>
+                    <option value="bol">Bolivia</option>
+                    <option value="ch">Chile</option>
+                    <option value="col">Colombia</option>
+                    <option value="py">Paraguay</option>
+                    <option value="uy">Uruguay</option>
+                </select>
+                <button type="Enviar">Enviar</button>
+
+            </form>
+        </div>
+        <div class="info-contacto">
+            <h2>Contáctanos</h2>
+            <p><span>Teléfono:</span> +54 (111) 000 - 2222</p>
+            <p><span>Dirección:</span> 888 Broadway, New York, NY 10003, Estados Unidos</p>
+            <div style="width: 100%"><iframe width="100%" height="300px"  frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=es&amp;q=40%C2%B044'17.9%22N%2073%C2%B059'23.5%22W+(Mi%20nombre%20de%20egocios)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.gps.ie/car-satnav-gps/">GPS car tracker</a></iframe></div>
+        </div>    
+        </main>
+
+
+
+    
 
     <footer> <!-- AQUI COMIENZA EL FOOTER-->
-        <div id="info-footer">
+        <div class="info-footer">
             <a href="#">Quiénes somos</a>
             <a href="#">Terminos y condiciones</a>
             <a href="#">Politicas de privacidad</a>
             <a href="#">Garantía y devoluciones</a>
             <a href="#">Promociones y sorteos</a>
         </div>
-        <div id="redes"> <!--DISTINTAS REDES SOCIALES-->
-            <h6>NUESTRAS REDES</h6>
-            <a href="#"><img src="img/logos de redes/facebook.png" alt="logo de facebook" height="30px"></a>
-            <a href="#"><img src="img/logos de redes/instagram.png" alt="logo de instagram" height="30px"></a>
+        <div class="redes"> <!--DISTINTAS REDES SOCIALES-->
+            <h6>Nuestras redes</h6>
+            <div>
+                <a href="#"><img src="img/logos de redes/facebook.png" alt="logo de facebook" height="40px"></a>
+                <a href="#"><img src="img/logos de redes/instagram.png" alt="logo de instagram" height="40px"></a>
+            </div>
         </div>
-        <div id="contacto"> <!--CONTACTO A TRAVES DE WHATSAPP-->
-            <h6>CONTACTO</h6>
+        <div class="contacto"> <!--CONTACTO A TRAVES DE WHATSAPP-->
+            <h6>Contacto</h6>
             <a href="#"><img src="img/logos de redes/whatsapp 2.png" alt="logo de whatsapp" height="40px"></a>
         </div>
-        <p id="derechos">Copyright © Todos los derechos reservados</p>
-    
-    
-    
+        <div class="derecho">
+            <p>Copyright © Todos los derechos reservados</p>
+        </div>
+
+
+
     </footer>
-        
 
 
 
+    <script src="js/bootstrap.js"></script>
 </body>
+
+
+
 
 </html>

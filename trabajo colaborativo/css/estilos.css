@@ -82,7 +82,7 @@
     justify-content: center;
     align-items: center;
     position: sticky;
-    top: 150px;
+    top: 0px;
     z-index: 1000;
     
 
@@ -683,3 +683,67 @@ main{
     }
     }
     
+/* CONTACTANOS */
+
+.main-contactanos {
+    display: flex;
+    padding: 20px;
+}
+.main-contactanos .formulario, .info-contacto{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.formulario, .info-contacto{
+    display: flex;
+    
+}
+
+
+
+.info-contacto span {
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.formulario h2, p {
+    align-items: center;
+    
+}
+.formulario h2, .info-contacto h2{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.formulario h2, .info-contacto h2{
+    font-size: 28px;
+}
+.formulario p, .info-contacto p{
+    font-size: 22px;
+}
+
+
+.formulario form{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.formulario form select {
+    height: 35px;
+    width: 20%;
+    margin-bottom: 10px;
+}
+.formulario button {
+    width: 20%;
+    align-self: center;
+    margin-bottom: 10px;
+}
+.formulario button:active{
+    background-color: rgb(16, 197, 0);
+    color: white;
+    border: none;
+}
+
+
+
