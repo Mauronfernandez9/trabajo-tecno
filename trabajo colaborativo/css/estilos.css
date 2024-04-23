@@ -574,6 +574,10 @@ main{
         display: flex;
         flex-direction: column;
     }
+    .section-productos-index{
+        display: flex;
+        flex-direction: column;
+    }
     
     .propaganda-2 img{
         height: 100px;
@@ -674,6 +678,10 @@ main{
     }
     
     .section-productos{
+        display: flex;
+        flex-direction: column;
+    }
+    .section-productos-index{
         display: flex;
         flex-direction: column;
     }
