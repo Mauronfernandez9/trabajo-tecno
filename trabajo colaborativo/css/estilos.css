@@ -468,13 +468,25 @@ main{
         display: grid;
         grid-template-columns: auto auto auto ;
     }
+    .section-productos-index{
+        display: grid;
+        grid-template-columns: auto auto auto ;
+    }
 }
+
+
+
 
 @media only screen and (min-width:768px) and (max-width:991px){
     .section-productos{
         display: grid;
         grid-template-columns: auto auto;
     }
+    .section-productos-index{
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+
 
 }
 
@@ -738,6 +750,7 @@ main{
     width: 20%;
     align-self: center;
     margin-bottom: 10px;
+    padding: 20px;
 }
 .formulario button:active{
     background-color: rgb(16, 197, 0);
