@@ -1,0 +1,411 @@
+[
+    {
+        "id" : 1,
+        "producto": "PC AMD Ryzen 5 4600G 8Gb SSD 240G",
+        "img": "img/productos index/1662661172_4600g-Photoroom.png-Photoroom.png",
+        "precio": 339990
+    },
+    {
+        "id" : 2,
+        "producto": "PC AMD Ryzen 5 4600G 16Gb SSD 240G",
+        "img": "img/productos index/1662661172_4600g-Photoroom.png-Photoroom.png",
+        "precio": 369990
+
+    },
+    {
+        "id" : 3,
+        "producto": "PC AMD Ryzen 5 5600G 8Gb SSD 240G",
+        "img": "img/productos index/1662661172_4600g-Photoroom.png-Photoroom.png",
+        "precio": 386990
+
+    },
+    {
+        "id" : 4,
+        "producto": "PC BANGHO E27 I3 12100 8GB SSD 480GB",
+        "img": "img/productos index/1677251097_e27.png",
+        "precio": 1260000
+
+    },
+    {
+        "id" : 5,
+        "producto": "NOTEBOOK NOBLEX CELERON N4020 4GB 128GB 14.1 HD W11",
+        "img": "img/productos index/NOTEBOOK NOBLEX CELERON N4020 4GB 128GB 14.1 HD W11-Photoroom.png-Photoroom.png",
+        "precio": 339990
+
+    },
+    {
+        "id" : 6,
+        "producto": "NOTEBOOK BANGHO MAX L5 I5 1155G7 SSD 240GB 8GB 15.6 HD W11",
+        "img": "img/productos index/NOTEBOOK BANGHO MAX L5 I5 1155G7 SSD 240GB 8GB 15.6 HD W11-Photoroom.png-Photoroom.png",
+        "precio": 748990
+
+    },
+    {
+        "id" : 7,
+        "producto": "NOTEBOOK LENOVO V15 G2 RYZEN 7 5700U 8GB SSD 256GB 15.6 FHD FREE",
+        "img": "img/productos index/NOTEBOOK LENOVO V15 G2 RYZEN 7 5700U 8GB SSD 256GB 15.6 FHD FREE-Photoroom.png-Photoroom.png",
+        "precio": 899990
+
+    },
+    {
+        "id" : 8,
+        "producto": "NOTEBOOK GIGABYTE AERO XE5 I7 12700H 16GB SSD 1TB + 1TB",
+        "img": "img/productos index/NOTEBOOK GIGABYTE AERO XE5 I7 12700H 16GB SSD 1TB + 1TB RTX 3070TI 16 W11.png",
+        "precio": 1260000
+
+    },
+    {
+        "id" : 9,
+        "producto": "DISCO SOLIDO SSD 240GB KINGSTON A400 SATA III",
+        "img": "img/productos index/DISCO SOLIDO SSD 240GB KINGSTON A400 SATA III.png",
+        "precio": 28999
+
+    },
+    {
+        "id" : 10,
+        "producto": "DISCO SOLIDO SSD 480GB KINGSTON A400 SATAIII",
+        "img": "img/productos index/DISCO SOLIDO SSD 480GB KINGSTON A400 SATAIII.png",
+        "precio": 40999
+
+    },
+    {
+        "id" : 11,
+        "producto": "DISCO SOLIDO SSD 960GB KINGSTON SATA III A400",
+        "img": "img/productos index/DISCO SOLIDO SSD 960GB KINGSTON SATA III A400.png",
+        "precio": 71990
+
+    },
+    {
+        "id" : 12,
+        "producto": "JOYSTICK REDRAGON SATURN PC USB G807",
+        "img": "img/productos index/JOYSTICK REDRAGON SATURN PC USB G807.png",
+        "precio": 19990
+
+    },
+    {
+        "id" : 13,
+        "producto": "MOUSE LOGITECH G203 LIGHTSYNC BLACK RGB",
+        "img": "img/productos index/MOUSE LOGITECH G203 LIGHTSYNC BLACK RGB.png",
+        "precio": 3199
+
+    },
+    {
+        "id" : 14,
+        "producto": "TECLADO REDRAGON K552 KUMARA 2 RAINBOW SW",
+        "img": "img/productos index/TECLADO REDRAGON K552 KUMARA 2 RAINBOW SW RED WHITE.png",
+        "precio": 4299
+
+    },
+    {
+        "id" : 15,
+        "producto": "AURICULAR GAMER LOGITECH G G335 MINT",
+        "img": "img/productos index/AURICULAR LOGITECH G G335 MINT.png",
+        "precio": 5799
+
+    },
+    {
+        "id" : 16,
+        "producto": "PARLANTE BLUETOOTH JBL CHARGE",
+        "img": "img/productos index/1642434017_jbl_charge5_hero_red_0029_x2.png",
+        "precio": 22999
+
+    },
+    {
+        "id" : 17,
+        "producto": "CAMARA IP TP-LINK EXTERIOR",
+        "img": "img/productos index/camara ip.png",
+        "precio": 7999
+
+    },
+    {
+        "id" : 18,
+        "producto": "PARLANTE NAKAMICHI BLUETOOTH",
+        "img": "img/productos index/PARLANTE INALAMBRICO NAKAMICHI PUNCH ROJO BLUETOOTH.png",
+        "precio": 15699
+
+    },
+    {
+        "id" : 19,
+        "producto": "RELOJ SMARTWATCH HAYLOU RS4",
+        "img": "img/productos index/RELOJ SMARTWATCH HAYLOU RS4.png",
+        "precio": 7999
+
+    },
+    {
+        "id" : 20,
+        "producto": "PC AMD Ryzen 5 4600G 8Gb SSD 240G",
+        "img": "img/productos index/1662661172_4600g-Photoroom.png-Photoroom.png",
+        "precio": 339990
+
+    },
+    {
+        "id" : 21,
+        "producto": "PC AMD Ryzen 5 4600G 16Gb SSD 240G",
+        "img": "img/productos index/1662661172_4600g-Photoroom.png-Photoroom.png",
+        "precio": 369990
+
+    },
+    {
+        "id" : 22,
+        "producto": "PC AMD Ryzen 5 5600G 8Gb SSD 240G",
+        "img": "img/productos index/1662661172_4600g-Photoroom.png-Photoroom.png",
+        "precio": 386990
+
+    },
+    {
+        "id" : 23,
+        "producto": "PC BANGHO E27 I3 12100 8GB SSD 480GB",
+        "img": "img/productos index/1677251097_e27.png",
+        "precio": 1260000
+
+    },
+    {
+        "id" : 24,
+        "producto": "PC AMD RYZEN 3 3200G 8GB SSD 240",
+        "img": "img/pc escritorio/pc amd ryzen 3.png",
+        "precio": 299990
+
+    },
+    {
+        "id" : 25,
+        "producto": "PC INTEL CELERON DUAL CORE",
+        "img": "img/pc escritorio/pc intel celeron.png",
+        "precio": 329990
+
+    },
+    {
+        "id" : 26,
+        "producto": "PC INTEL I3 10100 SSD 240GB 8GB",
+        "img": "img/pc escritorio/intel core i3 240gb.png",
+        "precio": 379990
+
+    },
+    {
+        "id" : 27,
+        "producto": "PC INTEL CORE I5 7600K SSD 240GB 8GB",
+        "img": "img/pc escritorio/intel i5 240gb.png",
+        "precio": 399990
+
+    },
+    {
+        "id" : 28,
+        "producto": "PC AMD RYZEN 3 3200G + MONITOR 22",
+        "img": "img/pc escritorio/pc amd ryzen 3200gb + monitor.png",
+        "precio": 414990
+
+    },
+    {
+        "id" : 29,
+        "producto": "PC INTEL I7 10700 SSD 240GB 8GB",
+        "img": "img/pc escritorio/pc intel i7.png",
+        "precio": 699990
+
+    },
+    {
+        "id" : 30,
+        "producto": "PC AMD RYZEN 7 8700G 960GB",
+        "img": "img/pc escritorio/pc amd ryzen 7.png",
+        "precio": 869990
+
+    },
+    {
+        "id" : 31,
+        "producto": "PC INTEL CORE I9 10900F 16GB",
+        "img": "img/pc escritorio/pc intel i9.png",
+        "precio": 999990
+
+    },
+    {
+        "id" : 32,
+        "producto": "MONITOR 19 SAMSUNG LED S33A",
+        "img": "img/monitores/monitor 19 samnsung led.png",
+        "precio": 106999
+
+    },
+    {
+        "id" : 33,
+        "producto": "MONITOR 19 PHILIPS HDMI HD 60HZ",
+        "img": "img/monitores/monitor 19 philips.png",
+        "precio": 107990
+
+    },
+    {
+        "id" : 34,
+        "producto": "MONITOR 22 NOBLEX FHD 75HZ VA",
+        "img": "img/monitores/1677524794_noblex-1.png",
+        "precio": 145787
+
+    },
+    {
+        "id" : 35,
+        "producto": "MONITOR LG LED 19 19M38A-B",
+        "img": "img/monitores/monitor lg led 19.png",
+        "precio": 109999
+
+    },
+    {
+        "id" : 36,
+        "producto": "MONITOR 22 HIKVISION FHD 5022 HDMI",
+        "img": "img/monitores/monitor hkvision.png",
+        "precio": 114990
+
+    },
+    {
+        "id" : 37,
+        "producto": "MONITOR 22 PHILIPS 221V8/77 FHD 75HZ",
+        "img": "img/monitores/monitor 22 philips.png",
+        "precio": 114990
+
+    },
+    {
+        "id" : 38,
+        "producto": "MONITOR 20 LED LG HDMI HD",
+        "img": "img/monitores/monitor 20 lg.png",
+        "precio": 114999
+
+    },
+    {
+        "id" : 39,
+        "producto": "MONITOR 22 LED SAMSUNG T350 HDMI VGA 75HZ",
+        "img": "img/monitores/samsung 22.png",
+        "precio": 129990
+
+    },
+    {
+        "id" : 40,
+        "producto": "MONITOR 22 HP P22V G4 FHD HDMI",
+        "img": "img/monitores/monitor hp.png",
+        "precio": 132990
+
+    },
+    {
+        "id" : 41,
+        "producto": "MOUSEPAD REDRAGON FLICK S",
+        "img": "img/productos perifericos/MOUSEPAD REDRAGON FLICK S.png",
+        "precio": 5299
+
+    },
+    {
+        "id" : 42 ,
+        "producto": "MOUSE GENIUS DX 110 BLANCO USB",
+        "img": "img/productos perifericos/mousegenius.png",
+        "precio": 5999
+
+    },
+    {
+        "id" : 43,
+        "producto": "AURICULAR HP 100 IN-EAR AZUL",
+        "img": "img/productos perifericos/auriculares azules hp 100.png",
+        "precio": 8999 
+
+    },
+    {
+        "id" : 44,
+        "producto": "PARLANTES GENIUS SP-Q160 GRIS",
+        "img": "img/productos perifericos/parlantes genius.png",
+        "precio":12999 
+
+    },
+    {
+        "id" : 45 ,
+        "producto": "TECLADO GENIUS KB-118 II ESPAÑOL USB BLACK",
+        "img": "img/productos perifericos/teclado genius.png",
+        "precio": 11999
+
+    },
+    {
+        "id" : 46 ,
+        "producto": "TECLADO NUMERICO KLIPXTREME ABACUS",
+        "img": "img/productos perifericos/teclado numerico klipxtreme.png",
+        "precio": 11999
+
+    },
+    {
+        "id" :47 ,
+        "producto": "MOUSE INALAMBRICO LOGITECH M317C FOREST FLORAL",
+        "img": "img/productos perifericos/mouse logitech floral.png",
+        "precio": 14990
+
+    },
+    {
+        "id" : 48,
+        "producto": "MOUSE INALAMBRICO LOGITECH M317C GOLDEN GARDEN",
+        "img": "img/productos perifericos/mouse logitech golden.png",
+        "precio": 14990
+
+    },
+    {
+        "id" :49 ,
+        "producto": "MOUSE INALAMBRICO LOGITECH M317C POW",
+        "img": "img/productos perifericos/mouse logitech pow.png",
+        "precio": 14990
+
+    },
+    {
+        "id" :50 ,
+        "producto": "AURICULAR LOGITECH PC STEREO H111",
+        "img": "img/productos perifericos/auricularconmicrofono.png",
+        "precio": 17990
+
+    },
+    {
+        "id" :51 ,
+        "producto": "AURICULAR LOGITECH PC STEREO H111",
+        "img": "img/productos perifericos/auricularconmicrofono.png",
+        "precio": 17990
+
+    },
+    {
+        "id" :52 ,
+        "producto": "AURICULAR KLIP XTREME OBSESSION RED",
+        "img": "img/productos perifericos/auricular xlip red.png",
+        "precio": 17999
+
+    },
+    {
+        "id" :53 ,
+        "producto": "TECLADO GENIUS SLIMSTAR Q200 WHITE USB SP",
+        "img": "img/productos perifericos/teclado genius white.png",
+        "precio": 16999
+
+    },
+    {
+        "id" :54 ,
+        "producto": "TECLADO GENIUS SLIMSTAR Q200 WHITE USB SP",
+        "img": "img/productos perifericos/teclado genius white.png",
+        "precio": 17990
+
+    },
+    {
+        "id" :55 ,
+        "producto": "JOYSTICK REDRAGON SATURN PC USB G807",
+        "img": "img/productos perifericos/joystick redragon.png",
+        "precio": 19990
+
+    },
+    {
+        "id" :56 ,
+        "producto": "AURICULAR KLIPXTREME INALAMBRICO FURY PRO",
+        "img": "img/productos perifericos/auricular xtreme.png",
+        "precio": 19999
+
+    },
+    {
+        "id" :57 ,
+        "producto": "PARLANTE GENIUS USB SP-HF180 WOOD",
+        "img": "img/productos perifericos/parlante genius usb.png",
+        "precio": 21999
+
+    },
+    {
+        "id" :58 ,
+        "producto": "MOUSEPAD REDRAGON KUNLUN L 880X420X4MM",
+        "img": "img/productos perifericos/mousepad redragon.png",
+        "precio": 22990
+
+    }
+  
+    
+
+
+]

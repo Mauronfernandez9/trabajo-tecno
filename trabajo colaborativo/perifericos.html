@@ -13,7 +13,7 @@
 <body>
     <header class="header"></header>
     <nav class="header-inferior"></nav>
-    <main>
+    <main id="app">
        
 
 
@@ -58,130 +58,21 @@
 
         </div>
         <div class="section-productos">
-            <div id="producto-amdryzen5-8gb" class="productos">
-                <h3>PC AMD Ryzen 5 4600G 8Gb SSD 240G</h3>
+            <div class="productos" v-for="dato of datosPerifericos">
+                <h3>{{dato.producto}}</h3>
                 <div class="contenedor-img">
-                    <img src="img/productos index/1662661172_4600g-Photoroom.png-Photoroom.png" alt="pc-ryzen"
-                        height="180px">
+                    <img :src="dato.img" alt="" height="180px">
                 </div>
 
-                
-                <p>$339990</p>
-                <button class="carrito">Agregar al carrito</button>
-            </div>
-            <div id="producto-amdryzen5-16gb" class="productos">
-                <h3>PC AMD Ryzen 5 4600G 16Gb SSD 240G</h3>
-                <div class="contenedor-img">
-                    <img src="img/productos index/1662661172_4600g-Photoroom.png-Photoroom.png" alt="pc-ryzen"
-                        height="180px">
-                </div>
 
-                
-                <p>$369990</p>
+                <p>${{dato.precio}}</p>
                 <button class="carrito">Agregar al carrito</button>
-            </div>
-            <div id="producto-amdryzen5-5600gb-8gb" class="productos">
-                <h3>PC AMD Ryzen 5 5600G 8Gb SSD 240G</h3>
-                <div class="contenedor-img">
-                    <img src="img/productos index/1662661172_4600g-Photoroom.png-Photoroom.png" alt="pc-ryzen"
-                        height="180px">
-                </div>
 
-                
-                <p>$386990</p>
-                <button class="carrito">Agregar al carrito</button>
-            </div>
-            <div id="pc-lite-bangho" class="productos">
-                <h3>PC BANGHO E27 I3 12100 8GB SSD 480GB</h3>
-                <div class="contenedor-img">
-                    <img src="img/productos index/1677251097_e27.png" alt="pc de escritorio" height="180px">
-                </div>
 
-                
-                <p>$1260000</p>
-                <button class="carrito">Agregar al carrito</button>
             </div>
-            <div id="pc-amryzen3-240gb" class="productos">
-                <h3>PC AMD RYZEN 3 3200G 8GB SSD 240</h3>
-                <div class="contenedor-img">
-                    <img src="img/pc escritorio/pc amd ryzen 3.png" alt="pc de escritorio" height="180px">
-                </div>
-
-                
-                <p>$299990</p>
-                <button class="carrito">Agregar al carrito</button>
-            </div>
-            <div id="pc-intelceleron-240gb" class="productos">
-                <h3>PC INTEL CELERON DUAL CORE</h3>
-                <div class="contenedor-img">
-                    <img src="img/pc escritorio/pc intel celeron.png" alt="pc de escritorio" height="180px">
-                </div>
-
-                
-                <p>$329990</p>
-                <button class="carrito">Agregar al carrito</button>
-            </div>
-            <div id="pc-inteli3-240gb" class="productos">
-                <h3>PC INTEL I3 10100 SSD 240GB 8GB</h3>
-                <div class="contenedor-img">
-                    <img src="img/pc escritorio/intel core i3 240gb.png" alt="pc de escritorio" height="180px">
-                </div>
-
-                
-                <p>$379990</p>
-                <button class="carrito">Agregar al carrito</button>
-            </div>
-            <div id="pc-inteli5-240gb" class="productos">
-                <h3>PC INTEL CORE I5 7600K SSD 240GB 8GB</h3>
-                <div class="contenedor-img">
-                    <img src="img/pc escritorio/intel i5 240gb.png" alt="pc de escritorio" height="180px">
-                </div>
-
-                
-                <p>$399990</p>
-                <button class="carrito">Agregar al carrito</button>
-            </div>
-            <div id="pc-amdryzen-monitor" class="productos">
-                <h3>PC AMD RYZEN 3 3200G + MONITOR 22</h3>
-                <div class="contenedor-img">
-                    <img src="img/pc escritorio/pc amd ryzen 3200gb + monitor.png" alt="pc de escritorio"
-                        height="180px">
-                </div>
-
-                
-                <p>$414990</p>
-                <button class="carrito">Agregar al carrito</button>
-            </div>
-            <div id="pc-inteli7" class="productos">
-                <h3>PC INTEL I7 10700 SSD 240GB 8GB</h3>
-                <div class="contenedor-img">
-                    <img src="img/pc escritorio/pc intel i7.png" alt="pc de escritorio" height="180px">
-                </div>
-
-                
-                <p>$699990</p>
-                <button class="carrito">Agregar al carrito</button>
-            </div>
-            <div id="pc-amdryzen7" class="productos">
-                <h3>PC AMD RYZEN 7 8700G 960GB</h3>
-                <div class="contenedor-img">
-                    <img src="img/pc escritorio/pc amd ryzen 7.png" alt="pc de escritorio" height="180px">
-                </div>
-                <p>$869990</p>
-                <button class="carrito">Agregar al carrito</button>
-            </div>
-            <div id="pc-inteli9" class="productos">
-                <h3>PC INTEL CORE I9 10900F 16GB</h3>
-                <div class="contenedor-img">
-                    <img src="img/pc escritorio/pc intel i9.png" alt="pc de escritorio" height="180px">
-                </div>
-
-                
-                <p>$999990</p>
-                <button class="carrito">Agregar al carrito</button>
-            </div>
-
         </div>
+
+        
 
 
 
@@ -195,7 +86,7 @@
 
 
 
-
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> 
     <script src="js/main.js"></script>
 </body>
 

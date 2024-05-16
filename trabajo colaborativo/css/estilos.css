@@ -272,6 +272,9 @@
     align-items: center;
     margin: 10px;    
 }
+.productos h3{
+    margin-bottom: 25px;
+}
 
 
 .productos>p{
@@ -473,9 +476,13 @@ main{
 
 }
 
-.formlogin input, .reglogin input{
+.formlogin input{
     margin-bottom: 20px;
     padding-left: 10px ;
+}
+.reglogin input{
+    padding-left: 10px ;
+
 }
 
 .reglogin input, .formlogin input{
@@ -483,7 +490,7 @@ main{
     padding: 5px;
 }
 
-#validar-clave, #repetir-contraseña {
+#validar-clave, #validar-clave2 {
     color: red;
     margin-bottom: 10px;
     padding: auto;
@@ -541,6 +548,40 @@ main{
     align-items: center;
     margin: 10px;
 }
+
+.div-mostrarClave,.div-nombre, .div-apellido, .div-mostrarRepetirClave{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    border-radius: 15px;
+    width: 350px;
+    margin-bottom: 15px;
+}
+.div-mostrarClave input, .div-nombre input, .div-apellido input, .div-mostrarRepetirClave input{
+    position: relative;
+    width: 310px;
+    border-radius: 15px;
+    right: 18px;
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+.icono-ojo {
+    position: absolute;
+    top: 50%;
+    right: 13px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    
+    
+}
+
+
+
+
+
 
 
 

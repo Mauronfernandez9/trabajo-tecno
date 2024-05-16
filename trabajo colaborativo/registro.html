@@ -21,9 +21,17 @@
             <h2>Registrate</h2>
 
             <label for="nombre">Nombre: </label>
-            <input type="text" name="nombre" id="nombre" required>
+            <div class="div-nombre">
+                <input type="text" name="nombre" id="nombre" required>
+            </div>
+            
+            
             <label for="apellido">Apellido:</label>
-            <input type="text" name="apellido" id="apellido" required>
+            <div class="div-apellido">
+                <input type="text" name="apellido" id="apellido" required>
+            </div>
+            
+            
             <div class="genero-registro">
                 <div class="masculino-registro">
                     <label for="masculino">Masculino</label>
@@ -35,14 +43,24 @@
                 </div>
 
             </div>
+
             <label for="clave">Contraseña:</label>
-            <input type="password" name="password" id="clave" required>
+            <div class="div-mostrarClave">
+                <input type="password" name="password" id="clave" required>
+                <span class="icono-ojo" onclick="mostrarContraseña()"><img src="img/formularios registro/invisible.png" width="24px" alt=""></span>
+            </div>
+            
+            
             <div id="validar-clave">&nbsp;</div>
 
-            <label for="clave2">Repetir Contraseña:</label>
-            <input type="password" name="password" id="clave2" required>
-            <div id="repetir-contraseña"></div>
+            
 
+            <label for="clave2">Repetir Contraseña:</label>
+            <div class="div-mostrarRepetirClave">
+                <input type="password" name="password" id="clave2" required>
+                <span class="icono-ojo" onclick="mostrarRepetirContraseña()"><img src="img/formularios registro/invisible.png" width="24px" alt=""></span>
+            </div>
+            <div id="validar-clave2">&nbsp;</div>
 
             <input type="submit" class="enviar" value="Enviar">
             

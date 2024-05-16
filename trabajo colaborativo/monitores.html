@@ -17,7 +17,7 @@
         <img src="img/monitores/banner monitores.jpg" width="100%"  alt="pcs de escritorios">
     </div>
 
-    <main>
+    <main id="app">
     
 
         <div class="pcs-escritorio-selectores">
@@ -60,131 +60,21 @@
             
 
         </div>
-        <div class="section-productos">
-            <div id="producto-monitor19-samsung" class="productos">
-                <h3>MONITOR 19 SAMSUNG LED S33A</h3>
-                <div class="contenedor-img">
-                    <img src="img/monitores/monitor 19 samnsung led.png" alt="monitor-samsung"
-                        height="180px">
-                </div>
+         <div class="section-productos">
+                <div class="productos" v-for="dato of datosMonitor">
+                    <h3>{{dato.producto}}</h3>
+                    <div class="contenedor-img">
+                        <img :src="dato.img" alt="" height="180px">
+                    </div>
 
-                
-                <p>$106999</p>
-                <button class="carrito">Agregar al carrito</button>
-            </div>
-            <div id="producto-monitor19-philips" class="productos">
-                <h3>MONITOR 19 PHILIPS HDMI HD 60HZ</h3>
-                <div class="contenedor-img">
-                    <img src="img/monitores/monitor 19 philips.png" alt="monitor-philips"
-                        height="180px">
-                </div>
 
-                
-                <p>$107990</p>
-                <button class="carrito">Agregar al carrito</button>
-            </div>
-            <div id="producto-monito22-noblex" class="productos">
-                <h3>MONITOR 22 NOBLEX FHD 75HZ VA</h3>
-                <div class="contenedor-img">
-                    <img src="img/monitores/1677524794_noblex-1.png" alt="pc-ryzen"
-                        height="180px">
-                </div>
+                    <p>${{dato.precio}}</p>
+                    <button class="carrito">Agregar al carrito</button>
 
-                
-                <p>$145787</p>
-                <button class="carrito">Agregar al carrito</button>
-            </div>
-            <div id="producto-monitor19-lg" class="productos">
-                <h3>MONITOR LG LED 19 19M38A-B</h3>
-                <div class="contenedor-img">
-                    <img src="img/monitores/monitor lg led 19.png" alt="monitor-lg" height="180px" width="100%">
-                </div>
 
-                
-                <p>$109999</p>
-                <button class="carrito">Agregar al carrito</button>
-            </div>
-            <div id="producto-monitor22-hkvision" class="productos">
-                <h3>MONITOR 22 HIKVISION FHD 5022 HDMI</h3>
-                <div class="contenedor-img">
-                    <img src="img/monitores/monitor hkvision.png" alt="monitor-hkvision" height="180px" width="100%">
                 </div>
-
-                
-                <p>$114990</p>
-                <button class="carrito">Agregar al carrito</button>
-            </div>
-            <div id="producto-monitor22-philips" class="productos">
-                <h3>MONITOR 22 PHILIPS 221V8/77 FHD 75HZ</h3>
-                <div class="contenedor-img">
-                    <img src="img/monitores/monitor 22 philips.png" alt="monitor-philips-22pulgadas" height="180px">
-                </div>
-
-                
-                <p>$114990</p>
-                <button class="carrito">Agregar al carrito</button>
-            </div>
-            <div id="producto-monitor20-lg" class="productos">
-                <h3>MONITOR 20 LED LG HDMI HD</h3>
-                <div class="contenedor-img">
-                    <img src="img/monitores/monitor 20 lg.png" alt="monitor-lg-20pulgadas" height="180px">
-                </div>
-
-                
-                <p>$114999</p>
-                <button class="carrito">Agregar al carrito</button>
-            </div>
-            <div id="producto-monitor22-samsung" class="productos">
-                <h3>MONITOR 22 LED SAMSUNG T350 HDMI VGA 75HZ</h3>
-                <div class="contenedor-img">
-                    <img src="img/monitores/samsung 22.png" alt="monitor samsung 20 pulgadas" height="180px">
-                </div>
-
-                
-                <p>$129990</p>
-                <button class="carrito">Agregar al carrito</button>
-            </div>
-            <div id="producto-monitor22-hp" class="productos">
-                <h3>MONITOR 22 HP P22V G4 FHD HDMI</h3>
-                <div class="contenedor-img">
-                    <img src="img/monitores/monitor hp.png" alt="monitor 22 pulgadas"
-                        height="180px">
-                </div>
-
-                
-                <p>$132990</p>
-                <button class="carrito">Agregar al carrito</button>
-            </div>
-            <div id="pc-inteli7" class="productos">
-                <h3>PC INTEL I7 10700 SSD 240GB 8GB</h3>
-                <div class="contenedor-img">
-                    <img src="img/pc escritorio/pc intel i7.png" alt="pc de escritorio" height="180px">
-                </div>
-
-                
-                <p>$699990</p>
-                <button class="carrito">Agregar al carrito</button>
-            </div>
-            <div id="pc-amdryzen7" class="productos">
-                <h3>PC AMD RYZEN 7 8700G 960GB</h3>
-                <div class="contenedor-img">
-                    <img src="img/pc escritorio/pc amd ryzen 7.png" alt="pc de escritorio" height="180px">
-                </div>
-                <p>$869990</p>
-                <button class="carrito">Agregar al carrito</button>
-            </div>
-            <div id="pc-inteli9" class="productos">
-                <h3>PC INTEL CORE I9 10900F 16GB</h3>
-                <div class="contenedor-img">
-                    <img src="img/pc escritorio/pc intel i9.png" alt="pc de escritorio" height="180px">
-                </div>
-
-                
-                <p>$999990</p>
-                <button class="carrito">Agregar al carrito</button>
             </div>
 
-        </div>
 
 
 
@@ -197,7 +87,7 @@
 
 
 
-
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> 
     <script src="js/main.js"></script>
 </body>
 

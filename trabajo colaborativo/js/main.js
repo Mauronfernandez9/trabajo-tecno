@@ -61,77 +61,157 @@ document.querySelector(".header-inferior").innerHTML = nav;
 document.querySelector("footer").innerHTML = footer;
 
 
-function validarContraseña(){
+function validarContraseña() {
     var clave = document.querySelector("#clave");
     let error = true;
-    let numeros = ["1","2","3","4","5","6","7","8","9"];
+    let numeros = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
     let letras = [];
     let simbolos = [];
 
-    for(let i = 97; i <= 122; i++){
+    for (let i = 97; i <= 122; i++) {
         letras.push(String.fromCharCode(i))
     }
     letrasMayusculas = letras.map(letra => letra.toUpperCase())
 
-    for (let j = 33; j <= 47; j++){
+    for (let j = 33; j <= 47; j++) {
         simbolos.push(String.fromCharCode(j));
     }
-    simbolos.push(String.fromCharCode(95)); 
+    simbolos.push(String.fromCharCode(95));
 
     let contiene8Digitos = false;
-    if(clave.value.length >= 8){
+    if (clave.value.length >= 8) {
         contiene8Digitos = true;
     }
 
     let contieneMayuscula = false;
-    for(let k = 0; k < clave.value.length; k++){
-        if (letrasMayusculas.includes(clave.value.charAt(k))){
+    for (let k = 0; k < clave.value.length; k++) {
+        if (letrasMayusculas.includes(clave.value.charAt(k))) {
             contieneMayuscula = true;
             break;
         }
     }
 
     let contieneSimbolo = false;
-    for(let l = 0; l < clave.value.length; l++){
-        if (simbolos.includes(clave.value.charAt(l))){
+    for (let l = 0; l < clave.value.length; l++) {
+        if (simbolos.includes(clave.value.charAt(l))) {
             contieneSimbolo = true;
             break;
         }
     }
 
     let contieneNumero = false;
-    for(let m = 0; m < clave.value.length; m++){
-        if (numeros.includes(clave.value.charAt(m))){
+    for (let m = 0; m < clave.value.length; m++) {
+        if (numeros.includes(clave.value.charAt(m))) {
             contieneNumero = true;
             break;
         }
     }
 
-    if (contiene8Digitos && contieneMayuscula && contieneNumero && contieneSimbolo){
+    if (contiene8Digitos && contieneMayuscula && contieneNumero && contieneSimbolo) {
         error = false;
-        document.querySelector("#validar-clave").innerHTML=`&nbsp;`;
+        document.querySelector("#validar-clave").innerHTML = `&nbsp;`;
         return clave;
     }
 
-    if (error === true){
-        document.querySelector("#validar-clave").innerHTML=`La contraseña debe tener al menos 8 caracteres y 1 mayuscula, 1 número y 1 caracter especial`;
+    if (error === true) {
+        document.querySelector("#validar-clave").innerHTML = `La contraseña debe tener al menos 8 caracteres y 1 mayuscula, 1 número y 1 caracter especial`;
         clave.focus();
         return false;
-        
+
     }
-    
+
 }
 
-function repetirContraseña(){
+function repetirContraseña() {
     error = true;
     clave2 = document.querySelector("#clave2");
-    if(clave2.value === clave.value){
+    if (clave2.value === clave.value) {
         error = false;
     }
-    if (error === true){
-        document.querySelector("#repetir-contraseña").innerHTML=`Las contraseñas deben coincidir`;
+    if (error === true) {
+        document.querySelector("#validar-clave2").innerHTML = `Las contraseñas deben coincidir`;
         clave2.focus();
         return false;
     }
 
 }
+
+function mostrarContraseña() {
+    let clave = document.querySelector("#clave");
+    let icono = document.querySelector(".div-mostrarClave img");
+    if (clave.type === "password") {
+        clave.type = "text";
+        icono.src = "./img/formularios registro/ojo.png"
+    }
+    else {
+        clave.type = "password";
+        icono.src = "img/formularios registro/invisible.png"
+    }
+}
+
+function mostrarRepetirContraseña() {
+    let clave = document.querySelector("#clave2");
+    let icono = document.querySelector(".div-mostrarRepetirClave img");
+    if (clave.type === "password") {
+        clave.type = "text";
+        icono.src = "./img/formularios registro/ojo.png"
+    }
+    else {
+        clave.type = "password";
+        icono.src = "img/formularios registro/invisible.png"
+    }
+}
+
+
+//Consumir api para mostrar los productos en el index con vue:
+const { createApp } = Vue
+createApp({
+    data() {
+        return {
+            url: "js/datos.json",
+            datos:[],
+            datosIndex: [],
+            datosPc:[],
+            datosMonitor:[],
+            datosPerifericos:[],
+            error: false,
+            section1: [],
+            section2: [],
+            section3: [],
+            section4: [],
+
+        }
+    },
+    methods: {
+        fetchData(url) {
+            fetch(url)
+                .then(response => response.json())
+                .then(
+                    data => {
+                        console.log(data)
+                        this.datos = data;
+                        this.datosIndex = this.datos.slice(0, 19)
+                        this.section1 = this.datosIndex.slice(0, 4);
+                        this.section2 = this.datosIndex.slice(4, 8);
+                        this.section3 = this.datosIndex.slice(8, 11);
+                        this.section4 = this.datosIndex.slice(11, 15);
+                        this.section5 = this.datosIndex.slice(15, 19);
+                        this.datosPc = this.datos.slice(19,31);
+                        this.datosMonitor = this.datos.slice(31,40);
+                        this.datosPerifericos = this.datos.slice(40,58)
+                    
+                    }
+                )
+                .catch(error => {
+                    console.log("Error:" + error)
+                    this.error = true
+                });
+        }
+    },
+    created() {  // created() se ejecuta cada vez que se crea el objeto VUE
+        this.fetchData(this.url)
+    }
+}).mount('#app')
+
+
+
