@@ -4,6 +4,7 @@
         "producto": "PC AMD Ryzen 5 4600G 8Gb SSD 240G",
         "img": "img/productos index/1662661172_4600g-Photoroom.png-Photoroom.png",
         "precio": 339990
+        
     },
     {
         "id" : 2,
@@ -31,6 +32,7 @@
         "producto": "NOTEBOOK NOBLEX CELERON N4020 4GB 128GB 14.1 HD W11",
         "img": "img/productos index/NOTEBOOK NOBLEX CELERON N4020 4GB 128GB 14.1 HD W11-Photoroom.png-Photoroom.png",
         "precio": 339990
+       
 
     },
     {
@@ -135,273 +137,349 @@
         "id" : 20,
         "producto": "PC AMD Ryzen 5 4600G 8Gb SSD 240G",
         "img": "img/productos index/1662661172_4600g-Photoroom.png-Photoroom.png",
-        "precio": 339990
+        "precio": 339990,
+        "marca": "amd",
+        "procesador":"ryzen 5",
+        "memoria ram": 8,
+        "uso-recomendado":"gaming"
+
 
     },
     {
         "id" : 21,
         "producto": "PC AMD Ryzen 5 4600G 16Gb SSD 240G",
         "img": "img/productos index/1662661172_4600g-Photoroom.png-Photoroom.png",
-        "precio": 369990
+        "precio": 369990,
+        "marca": "amd",
+        "procesador":"ryzen 5",
+        "memoria ram": 16,
+        "uso-recomendado": ["gaming","diseño"]
 
     },
     {
         "id" : 22,
         "producto": "PC AMD Ryzen 5 5600G 8Gb SSD 240G",
         "img": "img/productos index/1662661172_4600g-Photoroom.png-Photoroom.png",
-        "precio": 386990
+        "precio": 386990,
+        "marca": "amd",
+        "procesador":"ryzen 5",
+        "memoria ram": 8,
+        "uso-recomendado": ["gaming","diseño"]
 
     },
     {
         "id" : 23,
         "producto": "PC BANGHO E27 I3 12100 8GB SSD 480GB",
         "img": "img/productos index/1677251097_e27.png",
-        "precio": 1260000
+        "precio": 1260000,
+        "marca": "bangho",
+        "procesador":"i3",
+        "memoria ram": 8,
+        "uso-recomendado": ["gaming","hogar"]
 
     },
     {
         "id" : 24,
         "producto": "PC AMD RYZEN 3 3200G 8GB SSD 240",
         "img": "img/pc escritorio/pc amd ryzen 3.png",
-        "precio": 299990
+        "precio": 299990,
+        "marca": "amd",
+        "procesador":"ryzen 3",
+        "memoria ram": 8,
+        "uso-recomendado": ["gaming","hogar"]
 
     },
     {
         "id" : 25,
         "producto": "PC INTEL CELERON DUAL CORE",
         "img": "img/pc escritorio/pc intel celeron.png",
-        "precio": 329990
+        "precio": 329990,
+        "marca": "intel",
+        "procesador":"celeron",
+        "memoria ram": 8,
+        "uso-recomendado": ["gaming","hogar"]
 
     },
     {
         "id" : 26,
         "producto": "PC INTEL I3 10100 SSD 240GB 8GB",
         "img": "img/pc escritorio/intel core i3 240gb.png",
-        "precio": 379990
+        "precio": 379990,
+        "marca": "intel",
+        "procesador":"i3",
+        "memoria ram": 8,
+        "uso-recomendado": ["gaming","hogar"]
 
     },
     {
         "id" : 27,
         "producto": "PC INTEL CORE I5 7600K SSD 240GB 8GB",
         "img": "img/pc escritorio/intel i5 240gb.png",
-        "precio": 399990
+        "precio": 399990,
+        "marca": "intel",
+        "procesador":"i5",
+        "memoria ram": 8,
+        "uso-recomendado": "gaming"
 
     },
     {
         "id" : 28,
         "producto": "PC AMD RYZEN 3 3200G + MONITOR 22",
         "img": "img/pc escritorio/pc amd ryzen 3200gb + monitor.png",
-        "precio": 414990
+        "precio": 414990,
+        "marca": "amd",
+        "procesador":"i3",
+        "memoria ram": 8,
+        "uso-recomendado": ["gaming","hogar"]
 
     },
     {
         "id" : 29,
         "producto": "PC INTEL I7 10700 SSD 240GB 8GB",
         "img": "img/pc escritorio/pc intel i7.png",
-        "precio": 699990
+        "precio": 699990,
+        "marca": "intel",
+        "procesador":"i7",
+        "memoria ram": 8,
+        "uso-recomendado": ["gaming","hogar","diseño"]
 
     },
     {
         "id" : 30,
         "producto": "PC AMD RYZEN 7 8700G 960GB",
         "img": "img/pc escritorio/pc amd ryzen 7.png",
-        "precio": 869990
+        "precio": 869990,
+        "marca": "amd",
+        "procesador":"ryzen 7",
+        "memoria ram": 8,
+        "uso-recomendado": ["gaming","hogar","diseño"]
 
     },
     {
         "id" : 31,
         "producto": "PC INTEL CORE I9 10900F 16GB",
         "img": "img/pc escritorio/pc intel i9.png",
-        "precio": 999990
+        "precio": 999990,
+        "marca": "intel",
+        "procesador":"i9",
+        "memoria ram": 16,
+        "uso-recomendado": ["gaming","hogar","diseño"]
 
     },
     {
         "id" : 32,
         "producto": "MONITOR 19 SAMSUNG LED S33A",
         "img": "img/monitores/monitor 19 samnsung led.png",
-        "precio": 106999
+        "precio": 106999,
+        "marca":"samsung"
 
     },
     {
         "id" : 33,
         "producto": "MONITOR 19 PHILIPS HDMI HD 60HZ",
         "img": "img/monitores/monitor 19 philips.png",
-        "precio": 107990
+        "precio": 107990,
+        "marca":"philips"
 
     },
     {
         "id" : 34,
         "producto": "MONITOR 22 NOBLEX FHD 75HZ VA",
         "img": "img/monitores/1677524794_noblex-1.png",
-        "precio": 145787
+        "precio": 145787,
+        "marca":"noblex"
 
     },
     {
         "id" : 35,
         "producto": "MONITOR LG LED 19 19M38A-B",
         "img": "img/monitores/monitor lg led 19.png",
-        "precio": 109999
+        "precio": 109999,
+        "marca":"lg"
 
     },
     {
         "id" : 36,
         "producto": "MONITOR 22 HIKVISION FHD 5022 HDMI",
         "img": "img/monitores/monitor hkvision.png",
-        "precio": 114990
+        "precio": 114990,
+        "marca":"hikision"
 
     },
     {
         "id" : 37,
         "producto": "MONITOR 22 PHILIPS 221V8/77 FHD 75HZ",
         "img": "img/monitores/monitor 22 philips.png",
-        "precio": 114990
+        "precio": 114990,
+        "marca":"philips"
 
     },
     {
         "id" : 38,
         "producto": "MONITOR 20 LED LG HDMI HD",
         "img": "img/monitores/monitor 20 lg.png",
-        "precio": 114999
+        "precio": 114999,
+        "marca":"lg"
 
     },
     {
         "id" : 39,
         "producto": "MONITOR 22 LED SAMSUNG T350 HDMI VGA 75HZ",
         "img": "img/monitores/samsung 22.png",
-        "precio": 129990
+        "precio": 129990,
+        "marca":"samsung"
 
     },
     {
         "id" : 40,
         "producto": "MONITOR 22 HP P22V G4 FHD HDMI",
         "img": "img/monitores/monitor hp.png",
-        "precio": 132990
+        "precio": 132990,
+        "marca":"hp"
 
     },
     {
         "id" : 41,
         "producto": "MOUSEPAD REDRAGON FLICK S",
         "img": "img/productos perifericos/MOUSEPAD REDRAGON FLICK S.png",
-        "precio": 5299
+        "precio": 5299,
+        "marca":"redragon"
 
     },
     {
         "id" : 42 ,
         "producto": "MOUSE GENIUS DX 110 BLANCO USB",
         "img": "img/productos perifericos/mousegenius.png",
-        "precio": 5999
+        "precio": 5999,
+        "marca":"genius"
 
     },
     {
         "id" : 43,
         "producto": "AURICULAR HP 100 IN-EAR AZUL",
         "img": "img/productos perifericos/auriculares azules hp 100.png",
-        "precio": 8999 
+        "precio": 8999,
+        "marca":"hp" 
 
     },
     {
         "id" : 44,
         "producto": "PARLANTES GENIUS SP-Q160 GRIS",
         "img": "img/productos perifericos/parlantes genius.png",
-        "precio":12999 
+        "precio":12999 ,
+        "marca":"genius"
 
     },
     {
         "id" : 45 ,
         "producto": "TECLADO GENIUS KB-118 II ESPAÑOL USB BLACK",
         "img": "img/productos perifericos/teclado genius.png",
-        "precio": 11999
+        "precio": 11999,
+        "marca":"genius"
 
     },
     {
         "id" : 46 ,
         "producto": "TECLADO NUMERICO KLIPXTREME ABACUS",
         "img": "img/productos perifericos/teclado numerico klipxtreme.png",
-        "precio": 11999
+        "precio": 11999,
+        "marca":"kilp xtreme"
 
     },
     {
         "id" :47 ,
         "producto": "MOUSE INALAMBRICO LOGITECH M317C FOREST FLORAL",
         "img": "img/productos perifericos/mouse logitech floral.png",
-        "precio": 14990
+        "precio": 14990,
+        "marca":"logitech"
 
     },
     {
         "id" : 48,
         "producto": "MOUSE INALAMBRICO LOGITECH M317C GOLDEN GARDEN",
         "img": "img/productos perifericos/mouse logitech golden.png",
-        "precio": 14990
+        "precio": 14990,
+        "marca":"logitech"
 
     },
     {
         "id" :49 ,
         "producto": "MOUSE INALAMBRICO LOGITECH M317C POW",
         "img": "img/productos perifericos/mouse logitech pow.png",
-        "precio": 14990
+        "precio": 14990,
+        "marca":"logitech"
 
     },
     {
         "id" :50 ,
         "producto": "AURICULAR LOGITECH PC STEREO H111",
         "img": "img/productos perifericos/auricularconmicrofono.png",
-        "precio": 17990
+        "precio": 17990,
+        "marca":"logitech"
 
     },
     {
         "id" :51 ,
         "producto": "AURICULAR LOGITECH PC STEREO H111",
         "img": "img/productos perifericos/auricularconmicrofono.png",
-        "precio": 17990
+        "precio": 17990,
+        "marca":"logitech"
 
     },
     {
         "id" :52 ,
         "producto": "AURICULAR KLIP XTREME OBSESSION RED",
         "img": "img/productos perifericos/auricular xlip red.png",
-        "precio": 17999
+        "precio": 17999,
+        "marca":"kilp xtreme"
 
     },
     {
         "id" :53 ,
         "producto": "TECLADO GENIUS SLIMSTAR Q200 WHITE USB SP",
         "img": "img/productos perifericos/teclado genius white.png",
-        "precio": 16999
+        "precio": 16999,
+        "marca":"genius"
 
     },
     {
         "id" :54 ,
         "producto": "TECLADO GENIUS SLIMSTAR Q200 WHITE USB SP",
         "img": "img/productos perifericos/teclado genius white.png",
-        "precio": 17990
+        "precio": 17990,
+        "marca":"genius"
 
     },
     {
         "id" :55 ,
         "producto": "JOYSTICK REDRAGON SATURN PC USB G807",
         "img": "img/productos perifericos/joystick redragon.png",
-        "precio": 19990
+        "precio": 19990,
+        "marca":"redragon"
 
     },
     {
         "id" :56 ,
         "producto": "AURICULAR KLIPXTREME INALAMBRICO FURY PRO",
         "img": "img/productos perifericos/auricular xtreme.png",
-        "precio": 19999
+        "precio": 19999,
+        "marca":"kilp xtreme"
 
     },
     {
         "id" :57 ,
         "producto": "PARLANTE GENIUS USB SP-HF180 WOOD",
         "img": "img/productos perifericos/parlante genius usb.png",
-        "precio": 21999
+        "precio": 21999,
+        "marca":"genius"
 
     },
     {
         "id" :58 ,
         "producto": "MOUSEPAD REDRAGON KUNLUN L 880X420X4MM",
         "img": "img/productos perifericos/mousepad redragon.png",
-        "precio": 22990
+        "precio": 22990,
+        "marca":"redragon"
 
     }
   

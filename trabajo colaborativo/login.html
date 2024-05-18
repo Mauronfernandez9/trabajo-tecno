@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,29 +9,41 @@
     <link rel="shortcut icon" href="img/puesto-de-trabajo.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
+
 <body class="body-log-reg">
-<!--ENCABEZADO DE LA PAGINA WEB + NAV CON SUS CORRESPONDIENTES ANCLAS                                           -->
-<header class="header"></header>
-<nav class="header-inferior"></nav>
+    <!--ENCABEZADO DE LA PAGINA WEB + NAV CON SUS CORRESPONDIENTES ANCLAS                                           -->
+    <header class="header"></header>
+    <nav class="header-inferior"></nav>
     <main class="mainreg">
-        
-        <form class="formlogin">
-            <h2>Login</h2>
-        
+
+        <form class="reglogin" onsubmit="return validarContraseña() && repetirContraseña()">
+            <h2>Registrate</h2>
+
             <label for="usuario">Usuario: </label>
-            <input  type="text" name="nombre" id="nombre">
-                
-            <label for="contraseña">Contraseña:</label>
-            <input  type="text" name="apellido" id="apellido">
-                
-            <input class="enviar" type="submit" value="Enviar">
-        </main>
-        <footer> <!-- AQUI COMIENZA EL FOOTER-->
-        
+            <div class="div-usuario">
+                <input type="text" name="usuario" id="usuario" required>
+            </div>
+            
+            <label for="clave">Contraseña:</label>
+            <div class="div-mostrarClave">
+                <input type="password" name="password" id="clave" minlength="8" required>
+                <span class="icono-ojo" onclick="mostrarContraseña()"><img src="img/formularios registro/invisible.png" width="24px" alt=""></span>
+            </div>
+            
+            
+            <div id="validar-clave">&nbsp;</div>
 
-        </footer>
 
-    <script src="js/main.js"></script>            
+            <input type="submit" class="enviar" value="Enviar">
+            
+        </form>
+    </main>
+    <footer> <!-- AQUI COMIENZA EL FOOTER-->
+
+
+    </footer>
+
+    <script src="js/main.js"></script>
 </body>
 
 

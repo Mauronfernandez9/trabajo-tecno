@@ -25,22 +25,22 @@
             <h2>Monitores</h2>
             <div>
                 <label for="ordenar">Ordenar por:</label>
-                <select name="ordenar" id="ordenar">
-                    <option value="" disabled selected>Seleccionar</option>
+                <select name="ordenar" id="ordenar" v-model="selectOption" v-on:change="filtrarMonitores()" >
+                    <option  disabled >Seleccionar</option>
                     <option value="menor-precio">Menor precio</option>
                     <option value="mayor-precio">Mayor precio</option>
-                    <option value="nombre-ascedente">Nombre ascendente</option>
+                    <option value="nombre-ascendente">Nombre ascendente</option>
                     <option value="nombre-descendente">Nombre descendente</option>
                 </select>
             </div>
             <div>
                 <label for="mostrar">Mostrar:</label>
-                <select name="mostrar" id="mostrar">
-                    <option value="" disabled selected>Seleccionar</option>
+                <select name="mostrar" id="mostrar" v-model="selectMostrar" v-on:change="mostrarMonitores()">
+                    <option value="" selected disabled>Seleccionar</option>
+                    <option value="All">All</option>
+                    <option value="2">2</option>
                     <option value="4">4</option>
-                    <option value="4">8</option>
-                    <option value="12">12</option>
-                    <option value="24">24</option>
+            
                 </select>
 
 

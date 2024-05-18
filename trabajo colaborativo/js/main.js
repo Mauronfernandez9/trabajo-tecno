@@ -179,6 +179,10 @@ createApp({
             section2: [],
             section3: [],
             section4: [],
+            selectOption: "",
+            selectMostrar:"",
+            
+           
 
         }
     },
@@ -190,7 +194,7 @@ createApp({
                     data => {
                         console.log(data)
                         this.datos = data;
-                        this.datosIndex = this.datos.slice(0, 19)
+                        this.datosIndex = this.datos.slice(0, 19);
                         this.section1 = this.datosIndex.slice(0, 4);
                         this.section2 = this.datosIndex.slice(4, 8);
                         this.section3 = this.datosIndex.slice(8, 11);
@@ -198,7 +202,16 @@ createApp({
                         this.section5 = this.datosIndex.slice(15, 19);
                         this.datosPc = this.datos.slice(19,31);
                         this.datosMonitor = this.datos.slice(31,40);
-                        this.datosPerifericos = this.datos.slice(40,58)
+                        this.datosPerifericos = this.datos.slice(40,58);
+                        this.mostrar();
+                        this.mostrarFiltroNav();
+                        this.mostrarMonitores()
+                        this.filtrar();
+                        this.filtrarMonitores();
+                        this.filtrarPerifericos();
+                        this.mostrarPerifericos()
+
+                        
                     
                     }
                 )
@@ -206,12 +219,99 @@ createApp({
                     console.log("Error:" + error)
                     this.error = true
                 });
+        },
+        filtrar(){
+            if(this.selectOption === "menor-precio"){
+                this.datosPc.sort((a,b) =>   a.precio - b.precio);
+            }
+            else if (this.selectOption === "mayor-precio"){
+                this.datosPc.sort((a,b) => b.precio - a.precio) ;
+            }
+            else if (this.selectOption === "nombre-ascendente"){
+                this.datosPc.sort((a,b) => a.producto.localeCompare(b.producto));
+            }
+            else if (this.selectOption=== "nombre-descendente"){
+                this.datosPc.sort((a,b) => b.producto.localeCompare(a.producto));
+            }
+    },
+    filtrarMonitores(){
+        if(this.selectOption === "menor-precio"){
+            this.datosMonitor.sort((a,b) =>   a.precio - b.precio);
         }
+        else if (this.selectOption === "mayor-precio"){
+            this.datosMonitor.sort((a,b) => b.precio - a.precio) ;
+        }
+        else if (this.selectOption === "nombre-ascendente"){
+            this.datosMonitor.sort((a,b) => a.producto.localeCompare(b.producto));
+        }
+        else if (this.selectOption=== "nombre-descendente"){
+            this.datosMonitor.sort((a,b) => b.producto.localeCompare(a.producto));
+        }
+},filtrarPerifericos(){
+    if(this.selectOption === "menor-precio"){
+        this.datosPerifericos.sort((a,b) =>   a.precio - b.precio);
+    }
+    else if (this.selectOption === "mayor-precio"){
+        this.datosPerifericos.sort((a,b) => b.precio - a.precio) ;
+    }
+    else if (this.selectOption === "nombre-ascendente"){
+        this.datosPerifericos.sort((a,b) => a.producto.localeCompare(b.producto));
+    }
+    else if (this.selectOption=== "nombre-descendente"){
+        this.datosPerifericos.sort((a,b) => b.producto.localeCompare(a.producto));
+    }
+},
+    mostrar(){
+        if(this.selectMostrar === "All"){
+            this.datosPc = this.datos.slice(19,31);
+            this.datosPc = this.datosPc.slice(0,12)
+        }
+        else if(this.selectMostrar === "4"){
+            this.datosPc = this.datos.slice(19,31);
+            this.datosPc = this.datosPc.slice(0,4)
+        }
+        else if(this.selectMostrar === "9"){
+            this.datosPc = this.datos.slice(19,31);
+            this.datosPc = this.datosPc.slice(0,9)
+        }
+       
+    },
+    mostrarMonitores(){
+        if(this.selectMostrar === "All"){
+            this.datosMonitor = this.datos.slice(31,40);
+            this.datosMonitor = this.datosMonitor.slice(0,9)
+        }
+        else if(this.selectMostrar === "2"){
+            this.datosMonitor = this.datos.slice(31,40);
+            this.datosMonitor = this.datosMonitor.slice(0,2)
+        }
+        else if(this.selectMostrar === "4"){
+            this.datosMonitor = this.datos.slice(31,40);
+            this.datosMonitor = this.datosMonitor.slice(0,4)
+        }
+
+    },
+    mostrarPerifericos(){
+        if(this.selectMostrar === "All"){
+            this.datosPerifericos  = this.datos.slice(40,58);
+            this.datosPerifericos  = this.datosPerifericos.slice(0,18)
+        }
+        else if(this.selectMostrar === "3"){
+            this.datosPerifericos  = this.datos.slice(40,58);
+            this.datosPerifericos  = this.datosPerifericos .slice(0,3)
+        }
+        else if(this.selectMostrar === "12"){
+            this.datosPerifericos  = this.datos.slice(40,58);
+            this.datosPerifericos  = this.datosPerifericos .slice(0,12)
+        }
+    }
     },
     created() {  // created() se ejecuta cada vez que se crea el objeto VUE
         this.fetchData(this.url)
     }
 }).mount('#app')
+
+
 
 
 

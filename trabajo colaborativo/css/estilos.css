@@ -549,7 +549,7 @@ main{
     margin: 10px;
 }
 
-.div-mostrarClave,.div-nombre, .div-apellido, .div-mostrarRepetirClave{
+.div-mostrarClave,.div-nombre, .div-apellido, .div-mostrarRepetirClave, .div-usuario{
     position: relative;
     display: flex;
     align-items: center;
@@ -559,7 +559,7 @@ main{
     width: 350px;
     margin-bottom: 15px;
 }
-.div-mostrarClave input, .div-nombre input, .div-apellido input, .div-mostrarRepetirClave input{
+.div-mostrarClave input, .div-nombre input, .div-apellido input, .div-mostrarRepetirClave input,.div-usuario input {
     position: relative;
     width: 310px;
     border-radius: 15px;
