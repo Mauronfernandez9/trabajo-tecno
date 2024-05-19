@@ -13,16 +13,27 @@ let header = `
             <div class="formularios">
                 <a href="login.html">Login</a>
                 <a href="registro.html">Registrarse</a>
-                <a href="#" ><img src="img/nav/carrito-de-compras.png" height="31px" alt="carrito de compras"></a>
+                <a href="#" class="logo-carrito" @click.prevent="mostrarCarrito()"><img  src="img/nav/carrito-de-compras.png" height="31px" alt="carrito de compras"></a>
             </div>
 
         </div>
         `
 
 let nav = `
-<div class="desplegable">
+
+<div class="desplegable" @click.prevent="mostrarCategorias()">
             <a href="#">CATEGORIAS &#9660;</a>
         </div>
+        <div class="categorias" v-show="mostrarCategoria">
+                <a href="Pcs-de-escritorios.html">Pcs</a>
+                <a href="monitores.html">Monitores</a>
+                <a href="perifericos.html">Perifericos</a>
+                <a href="#">Notebooks</a>
+                <a href="#">Celulares</a>
+                <a href="#">Pendrives</a>
+                <a href="#">Accesorios</a>
+        
+            </div>
         <nav class="main-nav">
             <a href="index.html" class="inicio">Inicio</a>
             <a href="Pcs-de-escritorios.html" class="pcs-escritorio">Pcs de escritorios</a>
@@ -30,6 +41,7 @@ let nav = `
             <a href="perifericos.html">Perifericos</a>
             <a href="contactanos.html">Contactanos</a>
         </nav>
+   
     `
 let footer = `
     <div class="info-footer">
@@ -181,6 +193,9 @@ createApp({
             section4: [],
             selectOption: "",
             selectMostrar:"",
+            carrito:[],
+            mostrarContenido:false,
+            mostrarCategoria:false,
             
            
 
@@ -209,7 +224,12 @@ createApp({
                         this.filtrar();
                         this.filtrarMonitores();
                         this.filtrarPerifericos();
-                        this.mostrarPerifericos()
+                        this.mostrarPerifericos();
+                        this.añadirAlCarrito();
+                        this.removerDelCarrito();
+                        this.mostrarCarrito();
+                        this.mostrarCategorias()
+                        
 
                         
                     
@@ -304,13 +324,44 @@ createApp({
             this.datosPerifericos  = this.datos.slice(40,58);
             this.datosPerifericos  = this.datosPerifericos .slice(0,12)
         }
+    },
+    añadirAlCarrito(producto){
+        const acumulador = 0;
+        this.carrito.push(producto);
+        localStorage.setItem("carrito",JSON.stringify(this.carrito));
+       
+    },
+    cargarCarritoDesdeLocalStorage(){
+        const carritoGuardado = localStorage.getItem("carrito");
+        if(carritoGuardado){
+            this.carrito = JSON.parse(carritoGuardado);
+        }
+    },
+    totalCarrito(){
+        return this.carrito.reduce((total,item) => total + item.precio,0 )
+    },
+    removerDelCarrito(item){
+        const index = this.carrito.indexOf(item)
+        this.carrito.splice(index,1);
+        localStorage.setItem("carrito",JSON.stringify(this.carrito));
+    },
+    mostrarCarrito(){
+        this.mostrarContenido = !this.mostrarContenido; 
+    },
+    mostrarCategorias(){
+        this.mostrarCategoria = !this.mostrarCategoria; 
     }
+    
+    
     },
     created() {  // created() se ejecuta cada vez que se crea el objeto VUE
-        this.fetchData(this.url)
+        
+        this.fetchData(this.url),
+        this.cargarCarritoDesdeLocalStorage()
     }
 }).mount('#app')
 
+//CARRITO DE COMPRAS //
 
 
 

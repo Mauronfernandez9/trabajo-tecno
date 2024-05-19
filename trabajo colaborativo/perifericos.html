@@ -10,11 +10,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
-<body>
+<body id="app">
     <header class="header"></header>
     <nav class="header-inferior"></nav>
-    <main id="app">
-       
+    <main >
+
 
 
         <div class="pcs-escritorio-selectores">
@@ -23,7 +23,7 @@
             <div>
                 <label for="ordenar">Ordenar por:</label>
                 <select name="ordenar" id="ordenar" v-model="selectOption" v-on:change="filtrarPerifericos()">
-                    <option value="" disabled>Seleccionar</option>
+                    <option value="" selected>Seleccionar</option>
                     <option value="menor-precio">Menor precio</option>
                     <option value="mayor-precio">Mayor precio</option>
                     <option value="nombre-ascendente">Nombre ascendente</option>
@@ -37,7 +37,7 @@
                     <option value="All" selected>All</option>
                     <option value="3">3</option>
                     <option value="12">12</option>
-                    
+
                 </select>
 
 
@@ -54,7 +54,7 @@
                 <a href="#">Philips</a>
                 <a href="#">Samsung</a>
             </div>
-            
+
 
         </div>
         <div class="section-productos">
@@ -66,13 +66,28 @@
 
 
                 <p>${{dato.precio}}</p>
-                <button class="carrito">Agregar al carrito</button>
+                <button @click="añadirAlCarrito(dato)">Agregar al carrito</button>
 
 
             </div>
         </div>
+        <div class="carrito" v-show="mostrarContenido">
+            <h2>Carrito de compras</h2>
+            <div class="carrito-vacio" v-if="carrito.length === 0">El carrito esta vacío.</div>
+            <div v-else>
+                <ul>
+                    <li v-for="item of carrito">
+                        <img :src="item.img" height="100px" width="90px"> {{item.producto}}- ${{item.precio}}
+                        <button @click="removerDelCarrito(item)">Eliminar</button>
+                    </li>
+                    <p>Total = ${{totalCarrito()}}</p>
+                </ul>
 
-        
+            </div>
+
+
+        </div>
+
 
 
 
@@ -86,7 +101,7 @@
 
 
 
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> 
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="js/main.js"></script>
 </body>
 

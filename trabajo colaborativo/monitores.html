@@ -10,23 +10,22 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
-<body>
+<body id="app">
     <header class="header"></header>
     <nav class="header-inferior"></nav>
     <div class="banner-presentacion">
-        <img src="img/monitores/banner monitores.jpg" width="100%"  alt="pcs de escritorios">
+        <img src="img/monitores/banner monitores.jpg" width="100%" alt="pcs de escritorios">
     </div>
+    <main >
 
-    <main id="app">
-    
 
         <div class="pcs-escritorio-selectores">
 
             <h2>Monitores</h2>
             <div>
                 <label for="ordenar">Ordenar por:</label>
-                <select name="ordenar" id="ordenar" v-model="selectOption" v-on:change="filtrarMonitores()" >
-                    <option  disabled >Seleccionar</option>
+                <select name="ordenar" id="ordenar" v-model="selectOption" v-on:change="filtrarMonitores()">
+                    <option value="" selected disabled>Seleccionar</option>
                     <option value="menor-precio">Menor precio</option>
                     <option value="mayor-precio">Mayor precio</option>
                     <option value="nombre-ascendente">Nombre ascendente</option>
@@ -40,7 +39,7 @@
                     <option value="All">All</option>
                     <option value="2">2</option>
                     <option value="4">4</option>
-            
+
                 </select>
 
 
@@ -57,24 +56,39 @@
                 <a href="#">Philips</a>
                 <a href="#">Samsung</a>
             </div>
-            
+
 
         </div>
-         <div class="section-productos">
-                <div class="productos" v-for="dato of datosMonitor">
-                    <h3>{{dato.producto}}</h3>
-                    <div class="contenedor-img">
-                        <img :src="dato.img" alt="" height="180px">
-                    </div>
-
-
-                    <p>${{dato.precio}}</p>
-                    <button class="carrito">Agregar al carrito</button>
-
-
+        <div class="section-productos">
+            <div class="productos" v-for="dato of datosMonitor">
+                <h3>{{dato.producto}}</h3>
+                <div class="contenedor-img">
+                    <img :src="dato.img" alt="" height="180px">
                 </div>
+
+
+                <p>${{dato.precio}}</p>
+                <button @click="añadirAlCarrito(dato)">Agregar al carrito</button>
+
+
+            </div>
+        </div>
+        <div class="carrito" v-show="mostrarContenido">
+            <h2>Carrito de compras</h2>
+            <div class="carrito-vacio" v-if="carrito.length === 0">El carrito esta vacío.</div>
+            <div v-else>
+                <ul>
+                    <li v-for="item of carrito">
+                        <img :src="item.img" height="100px" width="90px"> {{item.producto}}- ${{item.precio}}
+                        <button @click="removerDelCarrito(item)">Eliminar</button>
+                    </li>
+                    <p>Total = ${{totalCarrito()}}</p>
+                </ul>
+
             </div>
 
+
+        </div>
 
 
 
@@ -87,7 +101,7 @@
 
 
 
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> 
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="js/main.js"></script>
 </body>
 

@@ -12,57 +12,60 @@
 </head>
 
 <body>
+    <div id="app">
 
-    <header></header>
-    <nav class="header-inferior"></nav>
+        <header></header>
+        <nav class="header-inferior"></nav>
 
-    <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
+        <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
 
-        <div class="carousel-inner" role="listbox">
-            <div class="carousel-item active">
-                <img src="img/propaganda/banner--1920x504.jpg" class="w-100 d-block" alt="First slide" />
+            <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active">
+                    <img src="img/propaganda/banner--1920x504.jpg" class="w-100 d-block" alt="First slide" />
+                </div>
+                <div class="carousel-item">
+                    <img src="img/propaganda/banner-intel-14va-1920x504-b.jpg" class="w-100 d-block"
+                        alt="Second slide" />
+                </div>
+                <div class="carousel-item">
+                    <img src="img/propaganda/banner-descuentos-logi-1920x504_web.jpg" class="w-100 d-block"
+                        alt="Third slide" />
+                </div>
             </div>
-            <div class="carousel-item">
-                <img src="img/propaganda/banner-intel-14va-1920x504-b.jpg" class="w-100 d-block" alt="Second slide" />
-            </div>
-            <div class="carousel-item">
-                <img src="img/propaganda/banner-descuentos-logi-1920x504_web.jpg" class="w-100 d-block"
-                    alt="Third slide" />
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselId" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
-
-
-
-
-    <main class="contenedor">
-        <div id="whatsapp">
-            <a href="#"><img src="img/logos de redes/whatsapp.png" alt="logo de whatsapp" height="70px"></a>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselId" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
 
-        <div id="app">
+
+
+
+
+        <main class="contenedor">
+            <div id="whatsapp">
+                <a href="#"><img src="img/logos de redes/whatsapp.png" alt="logo de whatsapp" height="70px"></a>
+            </div>
+
+
             <section class="section-1">
                 <div class="encabezado-section">
                     <h2>Renova tu pc de manera completa</h2>
                     <a href="Pcs-de-escritorios.html">ver pcs completas</a>
                 </div>
                 <div class="section-productos-index">
-                    <div  class="productos" v-for="dato of section1">
+                    <div class="productos" v-for="dato of section1">
                         <h3>{{dato.producto}}</h3>
                         <div class="contenedor-img"><img :src="dato.img" alt="" height="180px">
                         </div>
                         <p>${{dato.precio}}</p>
-                        <button class="carrito">Agregar al carrito</button>
+                        <button @click="añadirAlCarrito(dato)">Agregar al carrito</button>
                     </div>
-                </div>    
+                </div>
 
 
             </section>
@@ -75,12 +78,11 @@
                     <div class="productos" v-for="dato of section2">
                         <h3>{{dato.section2}}</h3>
                         <div class="contenedor-img">
-                            <img :src="dato.img"
-                                alt="" height="180px">
+                            <img :src="dato.img" alt="" height="180px">
                         </div>
 
                         <p>${{dato.precio}}</p>
-                        <button class="carrito">Agregar al carrito</button>
+                        <button @click="añadirAlCarrito(dato)">Agregar al carrito</button>
 
             </section>
             <section class="section-3">
@@ -88,16 +90,15 @@
                     <h2>¿Tu pc necesita almacenamiento?</h2>
                     <a href="#">ver almacenamientos</a>
                 </div>
-                <div class="section-productos-index" >
+                <div class="section-productos-index">
                     <div class="productos" v-for="dato of section3">
                         <h3>{{dato.producto}}</h3>
                         <div class="contenedor-img">
-                            <img :src="dato.img"
-                                alt="" height="180px">
+                            <img :src="dato.img" alt="" height="180px">
                         </div>
 
                         <p>${{dato.precio}}</p>
-                        <button class="carrito">Agregar al carrito</button>
+                        <button @click="añadirAlCarrito(dato)">Agregar al carrito</button>
                     </div>
 
                 </div>
@@ -116,12 +117,10 @@
                     <div class="productos" v-for="dato of section4">
                         <h3>{{dato.producto}}</h3>
                         <div class="contenedor-img">
-                            <img :src="dato.img"
-                                alt="" height="180px">
+                            <img :src="dato.img" alt="" height="180px">
                         </div>
-
                         <p>${{dato.precio}}</p>
-                        <button class="carrito">Agregar al carrito</button>
+                        <button @click="añadirAlCarrito(dato)">Agregar al carrito</button>
                     </div>
 
 
@@ -144,12 +143,11 @@
                     <div class="productos" v-for="dato of section5">
                         <h3>{{dato.producto}} </h3>
                         <div class="contenedor-img">
-                            <img :src="dato.img"
-                                alt="" height="180px">
+                            <img :src="dato.img" alt="" height="180px">
                         </div>
 
                         <p>${{dato.precio}}</p>
-                        <button class="carrito">Agregar al carrito</button>
+                        <button @click="añadirAlCarrito(dato)">Agregar al carrito</button>
                     </div>
 
 
@@ -157,8 +155,27 @@
 
             </section>
 
+            <div class="carrito" v-show="mostrarContenido">
+                <h2>Carrito de compras</h2>
+                <div class="carrito-vacio" v-if="carrito.length === 0">El carrito esta vacío.</div>
+                <div v-else>
+                    <ul>
+                        <li v-for="item of carrito">
+                            <img :src="item.img" height="100px" width="90px"> {{item.producto}}- ${{item.precio}}
+                            <button @click="removerDelCarrito(item)">Eliminar</button>
+                        </li>
+                        <p>Total = ${{totalCarrito()}}</p>
+                    </ul>
 
-        </div>
+                </div>
+
+
+            </div>
+            
+
+    </div>
+   
+
 
 
 
@@ -167,7 +184,7 @@
 
     <footer></footer>
 
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>  
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="js/main.js"></script>
     <script src="js/bootstrap.js"></script>
 </body>

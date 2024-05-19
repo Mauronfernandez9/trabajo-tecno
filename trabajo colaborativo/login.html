@@ -10,18 +10,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
-<body class="body-log-reg">
+<body class="body-log-reg" id="app">
+   
+    
     <!--ENCABEZADO DE LA PAGINA WEB + NAV CON SUS CORRESPONDIENTES ANCLAS                                           -->
     <header class="header"></header>
     <nav class="header-inferior"></nav>
     <main class="mainreg">
 
         <form class="reglogin" onsubmit="return validarContraseña() && repetirContraseña()">
-            <h2>Registrate</h2>
+            <h2>Iniciar Sesión</h2>
 
             <label for="usuario">Usuario: </label>
             <div class="div-usuario">
                 <input type="text" name="usuario" id="usuario" required>
+                <span class="icono-ojo"><img src="img/formularios registro/usuario.png" width="24px" alt=""></span>
             </div>
             
             <label for="clave">Contraseña:</label>
@@ -37,12 +40,29 @@
             <input type="submit" class="enviar" value="Enviar">
             
         </form>
+
     </main>
+    <div class="carrito" v-show="mostrarContenido">
+        <h2>Carrito de compras</h2>
+        <div class="carrito-vacio" v-if="carrito.length === 0">El carrito esta vacío.</div>
+        <div v-else>
+            <ul>
+                <li v-for="item of carrito">
+                    <img :src="item.img" height="100px" width="90px"> {{item.producto}}- ${{item.precio}}
+                    <button @click="removerDelCarrito(item)">Eliminar</button>
+                </li>
+                <p>Total = ${{totalCarrito()}}</p>
+            </ul>
+
+        </div>
+
+
+    </div>
     <footer> <!-- AQUI COMIENZA EL FOOTER-->
 
 
     </footer>
-
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="js/main.js"></script>
 </body>
 

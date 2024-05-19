@@ -10,99 +10,112 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
-<body>
+<body id="app">
     <header class="header"></header>
     <nav class="header-inferior"></nav>
     <div class="banner-presentacion">
         <img src="img/propaganda/banner-pc-de-escritorio.png" width="100%" alt="pcs de escritorios">
     </div>
 
-    <main id="app">
+    <main >
 
-        
+        <div class="pcs-escritorio-selectores">
 
-
-            <div class="pcs-escritorio-selectores">
-
-                <h2>Pcs de escritorios</h2>
-                <div>
-                    <label for="ordenar">Ordenar por:</label>
-                    <select name="ordenar" id="ordenar" v-model="selectOption" v-on:change="filtrar()">
-                        <option disabled >Seleccionar</option>
-                        <option value="menor-precio">Menor precio</option>
-                        <option value="mayor-precio">Mayor precio</option>
-                        <option value="nombre-ascendente">Nombre ascendente</option>
-                        <option value="nombre-descendente">Nombre descendente</option>
-                    </select>
-                </div>
-                <div>
-                    <label for="mostrar">Mostrar:</label>
-                    <select name="mostrar" id="mostrar" v-model="selectMostrar" v-on:change="mostrar()">
-                        <option value="" selected disabled>Select</option>
-                        <option value="All" selected>All</option>
-                        <option value="4">4</option>
-                        <option value="9">9</option>
-                        
-                        
-                    </select>
-
-
-                </div>
-
+            <h2>Pcs de escritorios</h2>
+            <div>
+                <label for="ordenar">Ordenar por:</label>
+                <select name="ordenar" id="ordenar" v-model="selectOption" v-on:change="filtrar()">
+                    <option value="" selected disabled>Seleccionar</option>
+                    <option value="menor-precio">Menor precio</option>
+                    <option value="mayor-precio">Mayor precio</option>
+                    <option value="nombre-ascendente">Nombre ascendente</option>
+                    <option value="nombre-descendente">Nombre descendente</option>
+                </select>
             </div>
-            <div class="nav-pc-escritorio">
-                <div class="marcas-pc" >
-                    <p>Marcas</p>
-                    <a href="#">Amd</a>
-                    <a href="#">Bangho</a>
-                    <a href="#">Intel</a>
-                </div>
-                <div class="procesador">
-                    <p>Procesador</p>
-                    <p>Amd</p>
-                    <a href="#">Ryzen 3</a>
-                    <a href="#">Ryzen 5</a>
-                    <a href="#">Ryzen 7</a>
-                    <p>Intel</p>
-                    <a href="#">Core I9</a>
-                    <a href="#">Core I7</a>
-                    <a href="#">Core I5</a>
-                    <a href="#">Core I3</a>
-                    <a href="#">Celeron</a>
-                </div>
-                <div class="memoria-ram">
-                    <p>Memoria Ram</p>
-                    <a href="#">4 Gigas</a>
-                    <a href="#">8 Gigas</a>
-                    <a href="#">16 Gigas</a>
-                    <a href="#">32 Gigas</a>
-                </div>
-                <div class="uso-recomendado-pc">
-                    <p>Uso Recomendado</p>
-                    <a href="#">Arquitectura-Diseño-Edición</a>
-                    <a href="#">Gaming</a>
-                    <a href="#">Hogar-Oficina</a>
-                </div>
+            <div>
+                <label for="mostrar">Mostrar:</label>
+                <select name="mostrar" id="mostrar" v-model="selectMostrar" v-on:change="mostrar()">
+                    <option value="" selected disabled>Select</option>
+                    <option value="All" selected>All</option>
+                    <option value="4">4</option>
+                    <option value="9">9</option>
+
+
+                </select>
 
 
             </div>
-            <div class="section-productos">
-                <div class="productos" v-for="dato of datosPc" :key="dato.id">
-                    <h3>{{dato.producto}}</h3>
-                    <div class="contenedor-img">
-                        <img :src="dato.img" alt="" height="180px">
-                    </div>
 
-
-                    <p>${{dato.precio}}</p>
-                    <button class="carrito">Agregar al carrito</button>
-
-
-                </div>
+        </div>
+        <div class="nav-pc-escritorio">
+            <div class="marcas-pc">
+                <p>Marcas</p>
+                <a href="#">Amd</a>
+                <a href="#">Bangho</a>
+                <a href="#">Intel</a>
+            </div>
+            <div class="procesador">
+                <p>Procesador</p>
+                <p>Amd</p>
+                <a href="#">Ryzen 3</a>
+                <a href="#">Ryzen 5</a>
+                <a href="#">Ryzen 7</a>
+                <p>Intel</p>
+                <a href="#">Core I9</a>
+                <a href="#">Core I7</a>
+                <a href="#">Core I5</a>
+                <a href="#">Core I3</a>
+                <a href="#">Celeron</a>
+            </div>
+            <div class="memoria-ram">
+                <p>Memoria Ram</p>
+                <a href="#">4 Gigas</a>
+                <a href="#">8 Gigas</a>
+                <a href="#">16 Gigas</a>
+                <a href="#">32 Gigas</a>
+            </div>
+            <div class="uso-recomendado-pc">
+                <p>Uso Recomendado</p>
+                <a href="#">Arquitectura-Diseño-Edición</a>
+                <a href="#">Gaming</a>
+                <a href="#">Hogar-Oficina</a>
             </div>
 
 
-        
+        </div>
+        <div class="section-productos">
+            <div class="productos" v-for="dato of datosPc" :key="dato.id">
+                <h3>{{dato.producto}}</h3>
+                <div class="contenedor-img">
+                    <img :src="dato.img" alt="" height="180px">
+                </div>
+
+
+                <p>${{dato.precio}}</p>
+                <button @click="añadirAlCarrito(dato)">Agregar al carrito</button>
+
+
+            </div>
+        </div>
+
+        <div class="carrito" v-show="mostrarContenido">
+            <h2>Carrito de compras</h2>
+            <div class="carrito-vacio" v-if="carrito.length === 0">El carrito esta vacío.</div>
+            <div v-else>
+                <ul>
+                    <li v-for="item of carrito">
+                        <img :src="item.img" height="100px" width="90px"> {{item.producto}}- ${{item.precio}}
+                        <button @click="removerDelCarrito(item)">Eliminar</button>
+                    </li>
+                    <p>Total = ${{totalCarrito()}}</p>
+                </ul>
+
+            </div>
+
+
+        </div>
+
+
 
 
     </main>
@@ -112,7 +125,7 @@
 
 
 
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> 
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="js/main.js"></script>
 </body>
 
